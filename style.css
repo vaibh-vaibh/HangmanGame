@@ -1,0 +1,138 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.game-container{
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h1{
+    font-size: xx-large;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+#word-display{
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #2b6cb0;
+}
+
+#wrong-letters {
+    font-size: 1.25rem;
+    color: #e53e3e;
+    min-height: 1.5rem;
+}
+
+#hangman-canvas{
+    background-color: #e2e8f0;
+    border-radius: 0.75rem;
+    border: 1px solid #cbd5e0;
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.input-group{
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+#letter-input{
+    padding: 0.75rem 1rem;
+    border: 2px solid #a0aec0;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    width: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#letter-input:focus{
+    border-color: #3182ce;
+}
+
+button{
+    padding: 0.75rem 1.5rem;
+    background-color: #4299e1;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover:not(:disabled){
+    background-color: #3182ce;
+    transform: translate(-2px);
+}
+
+button:active:not(:disabled){
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+button:disabled{
+    background-color: #a0aec0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#message{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    min-height: 2rem;
+}
+
+#message.win{
+    color: #38a169;
+}
+
+#message.lose{
+    color: #e53e3e;
+}
+
+#reset-button {
+  display: none;
+  margin-top: 1rem;
+  background-color: #48bb78;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#reset-button:hover:not(:disabled) {
+  background-color: #38a169;
+}
